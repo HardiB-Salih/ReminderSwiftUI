@@ -19,6 +19,8 @@
 		D59A1E822C0A0BD800508D64 /* ColorPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59A1E812C0A0BD800508D64 /* ColorPickerView.swift */; };
 		D59A1E852C0A155000508D64 /* ReminderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59A1E842C0A154F00508D64 /* ReminderService.swift */; };
 		D59A1E882C0A176400508D64 /* UIColorTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59A1E872C0A176400508D64 /* UIColorTransformer.swift */; };
+		D59A1E8A2C0A1F9700508D64 /* MyListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59A1E892C0A1F9700508D64 /* MyListView.swift */; };
+		D59A1E8C2C0A23F800508D64 /* PreviewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59A1E8B2C0A23F700508D64 /* PreviewData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +37,8 @@
 		D59A1E812C0A0BD800508D64 /* ColorPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPickerView.swift; sourceTree = "<group>"; };
 		D59A1E842C0A154F00508D64 /* ReminderService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderService.swift; sourceTree = "<group>"; };
 		D59A1E872C0A176400508D64 /* UIColorTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorTransformer.swift; sourceTree = "<group>"; };
+		D59A1E892C0A1F9700508D64 /* MyListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyListView.swift; sourceTree = "<group>"; };
+		D59A1E8B2C0A23F700508D64 /* PreviewData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +87,7 @@
 		D59A1E6B2C0A039A00508D64 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
+				D59A1E8B2C0A23F700508D64 /* PreviewData.swift */,
 				D59A1E6C2C0A039A00508D64 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
@@ -111,6 +116,7 @@
 				D59A1E672C0A039400508D64 /* HomeView.swift */,
 				D59A1E7F2C0A09FF00508D64 /* AddNewListView.swift */,
 				D59A1E812C0A0BD800508D64 /* ColorPickerView.swift */,
+				D59A1E892C0A1F9700508D64 /* MyListView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -209,7 +215,9 @@
 				D59A1E7D2C0A07CB00508D64 /* MyList+CoreDataProperties.swift in Sources */,
 				D59A1E802C0A09FF00508D64 /* AddNewListView.swift in Sources */,
 				D59A1E7B2C0A07AF00508D64 /* MyList+CoreDataClass.swift in Sources */,
+				D59A1E8C2C0A23F800508D64 /* PreviewData.swift in Sources */,
 				D59A1E752C0A04FC00508D64 /* CoreDataProvider.swift in Sources */,
+				D59A1E8A2C0A1F9700508D64 /* MyListView.swift in Sources */,
 				D59A1E852C0A155000508D64 /* ReminderService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

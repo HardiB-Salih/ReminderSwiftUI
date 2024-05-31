@@ -8,14 +8,16 @@
 import SwiftUI
 
 struct HomeView: View {
-    @State private var showNewList: Bool = false
     
+    @FetchRequest(sortDescriptors: [])
+    private var myListResult: FetchedResults<MyList>
+    @State private var showNewList: Bool = false
+
     
     var body: some View {
         NavigationStack {
             VStack {
-                Text("Hello")
-                
+                MyListView(myLists: myListResult)
                 Spacer()
                 
                 Button(action: { showNewList = true }, label: {
@@ -23,20 +25,27 @@ struct HomeView: View {
                         .bold()
                         .frame(maxWidth: .infinity, alignment: .trailing)
                         
-                }).padding()
-            }
-            .sheet(isPresented: $showNewList, content: {
-                AddNewListView(onSave: { name, color in
-                   // Save the list to the Database
-                    do {
-                        try ReminderService.saveMyList(name, color)
-                    } catch {
-                        print(error.localizedDescription)
-                    }
                 })
-            })
+            }
+            .padding()
+            .sheet(isPresented: $showNewList) { addNewListView() }
         }
     }
+    
+    
+    
+    private func addNewListView() -> some View {
+        AddNewListView(onSave: { name, color in
+            do {
+                try ReminderService.saveMyList(name, color)
+            } catch {
+                print(error.localizedDescription)
+            }
+        })
+    }
+    
+    
+    
 }
 
 #Preview {
