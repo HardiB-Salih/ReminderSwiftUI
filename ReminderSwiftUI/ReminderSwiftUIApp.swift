@@ -11,7 +11,13 @@ import SwiftUI
 struct ReminderSwiftUIApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            HomeView()
+                .environment(\.managedObjectContext,
+                              CoreDataProvider.shared.persistentContainer.viewContext)
         }
     }
 }
+
+// Adding managedObjectContext to the environment so that
+// HomeView and its child views have access to the Core Data
+// context (viewContext) needed to fetch and manage data.
