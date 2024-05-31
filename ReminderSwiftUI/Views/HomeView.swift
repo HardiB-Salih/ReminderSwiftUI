@@ -11,6 +11,7 @@ struct HomeView: View {
     
     @FetchRequest(sortDescriptors: [])
     private var myListResult: FetchedResults<MyList>
+    
     @State private var showNewList: Bool = false
 
     

@@ -24,7 +24,7 @@ struct AddNewListView: View {
                     TextField("List Name", text: $name)
                         .multilineTextAlignment(.center)
                         .padding(10)
-                        .background(Color(.systemGray6))
+                        .background(Color(.systemGray6).opacity(0.5))
                         .clipShape(RoundedRectangle(cornerRadius: 15.0, style: .continuous))
                         .overlay {
                             RoundedRectangle(cornerRadius: 15.0, style: .continuous)

@@ -18,7 +18,14 @@ struct MyListView: View {
                 Text("No reminder Found")
             } else {
                 ForEach(myLists) { list in
-                    MyListCellView(myList: list)
+                    NavigationLink(value: list) {
+                        MyListCellView(myList: list)
+                    }
+                }
+                .scrollContentBackground(.hidden)
+                .navigationDestination(for: MyList.self) { list in
+                    MyListDetailView(mylist: list)
+                        .navigationTitle(list.name.capitalized)
                 }
             }
         }

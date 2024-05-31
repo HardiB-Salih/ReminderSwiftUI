@@ -21,6 +21,7 @@
 		D59A1E882C0A176400508D64 /* UIColorTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59A1E872C0A176400508D64 /* UIColorTransformer.swift */; };
 		D59A1E8A2C0A1F9700508D64 /* MyListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59A1E892C0A1F9700508D64 /* MyListView.swift */; };
 		D59A1E8C2C0A23F800508D64 /* PreviewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59A1E8B2C0A23F700508D64 /* PreviewData.swift */; };
+		D59A1E8E2C0A2FD600508D64 /* MyListDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59A1E8D2C0A2FD600508D64 /* MyListDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		D59A1E872C0A176400508D64 /* UIColorTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorTransformer.swift; sourceTree = "<group>"; };
 		D59A1E892C0A1F9700508D64 /* MyListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyListView.swift; sourceTree = "<group>"; };
 		D59A1E8B2C0A23F700508D64 /* PreviewData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewData.swift; sourceTree = "<group>"; };
+		D59A1E8D2C0A2FD600508D64 /* MyListDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyListDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +119,7 @@
 				D59A1E7F2C0A09FF00508D64 /* AddNewListView.swift */,
 				D59A1E812C0A0BD800508D64 /* ColorPickerView.swift */,
 				D59A1E892C0A1F9700508D64 /* MyListView.swift */,
+				D59A1E8D2C0A2FD600508D64 /* MyListDetailView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -209,6 +212,7 @@
 			files = (
 				D59A1E822C0A0BD800508D64 /* ColorPickerView.swift in Sources */,
 				D59A1E682C0A039400508D64 /* HomeView.swift in Sources */,
+				D59A1E8E2C0A2FD600508D64 /* MyListDetailView.swift in Sources */,
 				D59A1E792C0A063400508D64 /* RemindersModel.xcdatamodeld in Sources */,
 				D59A1E882C0A176400508D64 /* UIColorTransformer.swift in Sources */,
 				D59A1E662C0A039400508D64 /* ReminderSwiftUIApp.swift in Sources */,
