@@ -13,39 +13,26 @@ struct MyListDetailView: View {
     @State private var openAddReminder: Bool = false
     @State var title: String = ""
     
+    
     @FetchRequest(sortDescriptors: [])
     private var remonderResults: FetchedResults<Reminder>
-    
     
     init(mylist: MyList) {
         self.mylist = mylist
         _remonderResults = FetchRequest(fetchRequest: ReminderService.getRemindersByList(myList: mylist))
     }
     
+   
+    
     var body: some View {
-        VStack {
-            ForEach(remonderResults) { reminder in
-                Text(reminder.title ?? "")
-                    .padding(12)
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    .background(Color(.systemGray6.withAlphaComponent(0.5)))
-                    .clipShape(RoundedRectangle(cornerRadius: 14, style: .continuous))
-                    .overlay {
-                        RoundedRectangle(cornerRadius: 14, style: .continuous)
-                            .stroke(Color(.systemGray5), lineWidth: 1.0)
-                    }
-            }.onDelete(perform: { indexSet in
-                
-            })
-            
-            Spacer()
+        ZStack (alignment: .bottomTrailing){
+            ReminderListView(reminders: remonderResults)
             Button("New Reminder") {
                 openAddReminder = true
             }
-            .frame(maxWidth: .infinity, alignment: .trailing)
             .bold()
+            .padding(.horizontal)
         }
-        .padding()
         .alert("New Reminder", isPresented: $openAddReminder) {
             TextField("Reminder Title", text: $title)
             Button("Cancel", role: .cancel) {
@@ -69,7 +56,7 @@ struct MyListDetailView: View {
     }
 }
 
-#Preview {
-    MyListDetailView(mylist: PreviewData.myList)
-    
-}
+//#Preview {
+//    MyListDetailView(mylist: PreviewData.myList)
+//    
+//}
